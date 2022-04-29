@@ -7,6 +7,7 @@
 //
 
 import RIBs
+import RxSwift
 import SnapKit
 import UIKit
 
@@ -51,5 +52,12 @@ final class OffGameViewController: UIViewController, OffGamePresentable, OffGame
     startButton.setTitle("Start Game", for: .normal)
     startButton.setTitleColor(UIColor.white, for: .normal)
     startButton.backgroundColor = UIColor.black
+    
+//    startButton.rx.tap
+//      .subscribe(onNext: { [weak self] in
+//        self?.listener?.tapStart()
+//      })
+//      .disposed(by: <#T##DisposeBag#>)
   }
+//  private let disposeBag = Dispo
 }

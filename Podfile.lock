@@ -1,38 +1,29 @@
 PODS:
-  - RIBs (0.9.3):
-    - RxRelay (~> 6.0.0)
-    - RxSwift (~> 6.0.0)
-  - RxCocoa (6.0.0):
-    - RxRelay (= 6.0.0)
-    - RxSwift (= 6.0.0)
-  - RxRelay (6.0.0):
-    - RxSwift (= 6.0.0)
-  - RxSwift (6.0.0)
+  - RIBs (0.9.1):
+    - RxSwift (~> 4.0)
+  - RxCocoa (4.5.0):
+    - RxSwift (>= 4.4.2, ~> 4.4)
+  - RxSwift (4.5.0)
   - SnapKit (4.0.1)
 
 DEPENDENCIES:
-  - RIBs (from `../../../`)
+  - RIBs (~> 0.9)
   - RxCocoa
   - SnapKit (~> 4.0.0)
 
 SPEC REPOS:
   trunk:
+    - RIBs
     - RxCocoa
-    - RxRelay
     - RxSwift
     - SnapKit
 
-EXTERNAL SOURCES:
-  RIBs:
-    :path: "../../../"
-
 SPEC CHECKSUMS:
-  RIBs: dd8df1129289d51ed4fec6e2127613d9eaba204e
-  RxCocoa: 3f79328fafa3645b34600f37c31e64c73ae3a80e
-  RxRelay: 8d593be109c06ea850df027351beba614b012ffb
-  RxSwift: c14e798c59b9f6e9a2df8fd235602e85cc044295
+  RIBs: 879184fbca567425c488d6b3d14a9c5abfbf9d47
+  RxCocoa: cbf70265dc65a981d4ac982e513c10cf23df24a0
+  RxSwift: f172070dfd1a93d70a9ab97a5a01166206e1c575
   SnapKit: 0de968a9fec17499afa29683b05d0c775b6d1c29
 
-PODFILE CHECKSUM: 20ff806acde0c76d2e2ba7b1c827f4144824f336
+PODFILE CHECKSUM: 0c6ee4db9550233ca9fb78c420835aad74c35a55
 
 COCOAPODS: 1.11.3
