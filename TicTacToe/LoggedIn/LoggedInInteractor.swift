@@ -11,15 +11,14 @@ import RxSwift
 
 protocol LoggedInRouting: Routing {
   func cleanupViews()
-  // TODO: Declare methods the interactor can invoke to manage sub-tree via the router.
+  func routeToTicTacToe()
 }
 
 protocol LoggedInListener: AnyObject {
   // TODO: Declare methods the interactor can invoke to communicate with other RIBs.
 }
 
-final class LoggedInInteractor: Interactor, LoggedInInteractable, OffGameListener {
-  
+final class LoggedInInteractor: Interactor, LoggedInInteractable, OffGameListener, TicTacToeListener {
   weak var router: LoggedInRouting?
   weak var listener: LoggedInListener?
   
@@ -37,5 +36,10 @@ final class LoggedInInteractor: Interactor, LoggedInInteractable, OffGameListene
     
     router?.cleanupViews()
     // TODO: Pause any business logic.
+  }
+  func didTapStart() {
+    router?.routeToTicTacToe()
+  }
+  func gameDidEnd() {
   }
 }

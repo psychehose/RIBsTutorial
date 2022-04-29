@@ -12,9 +12,7 @@ import SnapKit
 import UIKit
 
 protocol OffGamePresentableListener: class {
-  // TODO: Declare properties and methods that the view controller can invoke to perform
-  // business logic, such as signIn(). This protocol is implemented by the corresponding
-  // interactor class.
+  func startTicTacToe()
 }
 
 final class OffGameViewController: UIViewController, OffGamePresentable, OffGameViewControllable {
@@ -52,12 +50,12 @@ final class OffGameViewController: UIViewController, OffGamePresentable, OffGame
     startButton.setTitle("Start Game", for: .normal)
     startButton.setTitleColor(UIColor.white, for: .normal)
     startButton.backgroundColor = UIColor.black
-    
-//    startButton.rx.tap
-//      .subscribe(onNext: { [weak self] in
-//        self?.listener?.tapStart()
-//      })
-//      .disposed(by: <#T##DisposeBag#>)
+
+    startButton.rx.tap
+      .subscribe(onNext: { [weak self] in
+        self?.listener?.startTicTacToe()
+      })
+      .disposed(by: disposeBag)
   }
-//  private let disposeBag = Dispo
+  private let disposeBag = DisposeBag()
 }
