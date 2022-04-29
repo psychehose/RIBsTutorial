@@ -19,7 +19,7 @@ protocol OffGamePresentable: Presentable {
 }
 
 protocol OffGameListener: AnyObject {
-  func didTapStart()
+  func startTicTacToe()
 }
 
 final class OffGameInteractor: PresentableInteractor<OffGamePresentable>, OffGameInteractable, OffGamePresentableListener {
@@ -45,6 +45,6 @@ final class OffGameInteractor: PresentableInteractor<OffGamePresentable>, OffGam
   }
 
   func startTicTacToe() {
-    listener?.didTapStart()
+    listener?.startTicTacToe()
   }
 }

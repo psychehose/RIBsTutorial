@@ -32,7 +32,7 @@ final class RootRouter: LaunchRouter<RootInteractable, RootViewControllable>, Ro
     interactor: RootInteractable,
     viewController: RootViewControllable,
     loggedOutBuilder: LoggedOutBuildable,
-    loggedInBuilder: LoggedInBuilder
+    loggedInBuilder: LoggedInBuildable
   ) {
     self.loggedOutBuilder = loggedOutBuilder
     self.loggedInBuilder = loggedInBuilder
@@ -63,7 +63,7 @@ final class RootRouter: LaunchRouter<RootInteractable, RootViewControllable>, Ro
     viewController.present(viewController: loggedOut.viewControllable)
   }
   
-  func routeToLoggedIn(withPlayer1Name player1Name: String, plyer2Name: String) {
+  func routeToLoggedIn(withPlayer1Name player1Name: String, player2Name: String) {
     if let loggedOut = self.loggedOut {
       detachChild(loggedOut)
       viewController.dismiss(viewController: loggedOut.viewControllable)

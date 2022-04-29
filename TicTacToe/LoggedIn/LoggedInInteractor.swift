@@ -38,7 +38,7 @@ final class LoggedInInteractor: Interactor, LoggedInInteractable, OffGameListene
     router?.cleanupViews()
     // TODO: Pause any business logic.
   }
-  func didTapStart() {
+  func startTicTacToe() {
     router?.routeToTicTacToe()
   }
   func gameDidEnd() {
